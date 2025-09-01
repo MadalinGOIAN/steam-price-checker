@@ -25,7 +25,9 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: build-artifacts
-          path: ${{github.workspace}}/build
+          path: |
+            ${{github.workspace}}/build
+            ${{github.workspace}}/build/${{env.BUILD_TYPE}}
 
   test:
     runs-on: windows-latest

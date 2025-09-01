@@ -39,6 +39,8 @@ set(INSTALL_GTEST OFF CACHE BOOL "" FORCE)
 
 FetchContent_MakeAvailable(googletest)
 
+enable_testing()
+
 # Project subdirectories
 add_subdirectory(src)
 add_subdirectory(test)
