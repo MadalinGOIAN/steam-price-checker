@@ -41,22 +41,6 @@ FetchContent_MakeAvailable(googletest)
 
 enable_testing()
 
-# Main executable
-add_executable(steam-price-checker src/main.cpp)
-
-target_link_libraries(steam-price-checker
-    PRIVATE
-        nlohmann_json::nlohmann_json
-        libcurl
-)
-
-# Tests executable
-add_executable(steam-price-checker-tests test/test.cpp)
-
-target_link_libraries(steam-price-checker-tests
-    PRIVATE
-        gtest_main
-)
-
-include(GoogleTest)
-gtest_discover_tests(steam-price-checker-tests)
+# Project subdirectories
+add_subdirectory(src)
+add_subdirectory(test)
