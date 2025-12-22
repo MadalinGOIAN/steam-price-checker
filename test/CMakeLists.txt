@@ -1,9 +1,14 @@
-add_executable(steam-price-checker-tests TestGame.cpp)
+add_executable(steam-price-checker-tests
+	TestGame.cpp 
+	TestSteamApiFetcher.cpp
+)
 
 target_link_libraries(steam-price-checker-tests 
 	PRIVATE 
-		Game
-		gtest_main)
+		steam-price-checker-lib
+		gtest_main
+		gmock
+)
 
 include(GoogleTest)
 gtest_discover_tests(steam-price-checker-tests)
