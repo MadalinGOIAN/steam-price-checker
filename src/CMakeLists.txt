@@ -2,7 +2,7 @@ add_library(steam-price-checker-lib
     Game.cpp
     HttpClient.cpp
     SteamApiFetcher.cpp
-)
+    SteamGameRepository.cpp)
 
 target_include_directories(steam-price-checker-lib PUBLIC ${PROJECT_SOURCE_DIR}/include)
 

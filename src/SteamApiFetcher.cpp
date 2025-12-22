@@ -1,5 +1,4 @@
 #include <nlohmann/json.hpp>
-#include <iostream>
 #include "SteamApiFetcher.hpp"
 
 using json = nlohmann::json;

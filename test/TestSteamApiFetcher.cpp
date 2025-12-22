@@ -21,8 +21,6 @@ protected:
 
 	MockHttpClient mockHttpClient;
 	SteamApiFetcher* sut;
-
-    const std::string steamUrl{ "https://store.steampowered.com/api/featuredcategories" };
 };
 
 TEST_F(TestSteamApiFetcher, ParsesSingleDiscountedGameCorrectly)
@@ -42,7 +40,7 @@ TEST_F(TestSteamApiFetcher, ParsesSingleDiscountedGameCorrectly)
       }
     })" };
 
-    EXPECT_CALL(mockHttpClient, get(steamUrl))
+    EXPECT_CALL(mockHttpClient, get(_))
         .WillOnce(Return(correctSingleItemJson));
 
     std::vector<Game> games = sut->fetchDiscountedGames();
@@ -86,7 +84,7 @@ TEST_F(TestSteamApiFetcher, ParsesMultipleDiscountedGamesCorrectly)
       }
     })" };
 
-    EXPECT_CALL(mockHttpClient, get(steamUrl))
+    EXPECT_CALL(mockHttpClient, get(_))
         .WillOnce(Return(correctMultipleItemsJson));
 
     std::vector<Game> games = sut->fetchDiscountedGames();
@@ -96,7 +94,7 @@ TEST_F(TestSteamApiFetcher, ParsesMultipleDiscountedGamesCorrectly)
 
 TEST_F(TestSteamApiFetcher, DiscardedDataThrowsException)
 {
-    EXPECT_CALL(mockHttpClient, get(steamUrl))
+    EXPECT_CALL(mockHttpClient, get(_))
         .WillOnce(Return(""));
 
     try
@@ -131,7 +129,7 @@ TEST_F(TestSteamApiFetcher, DataWithoutSpecialSectionThrowsException)
       ]
     })" };
 
-    EXPECT_CALL(mockHttpClient, get(steamUrl))
+    EXPECT_CALL(mockHttpClient, get(_))
         .WillOnce(Return(jsonWithousSpecialSection));
 
     try
@@ -164,7 +162,7 @@ TEST_F(TestSteamApiFetcher, DataWithoutItemsSectionThrowsException)
       }
     })" };
 
-    EXPECT_CALL(mockHttpClient, get(steamUrl))
+    EXPECT_CALL(mockHttpClient, get(_))
         .WillOnce(Return(jsonWithousItemsSection));
 
     try
