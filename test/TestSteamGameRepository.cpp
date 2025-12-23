@@ -20,17 +20,17 @@ TEST(TestGameRepository, ReturnsGamesFromFetcher) {
 
     EXPECT_EQ(result.size(), expectedGames.size());
 
-    EXPECT_EQ(result[0].GetName(), expectedGames[0].GetName());
-    EXPECT_EQ(result[0].GetDefaultPrice(), expectedGames[0].GetDefaultPrice());
-    EXPECT_EQ(result[0].GetCurrentPrice(), expectedGames[0].GetCurrentPrice());
-    EXPECT_EQ(result[0].GetDiscount(), expectedGames[0].GetDiscount());
-    EXPECT_EQ(result[0].GetCurrency(), expectedGames[0].GetCurrency());
+    EXPECT_EQ(result[0].getName(), expectedGames[0].getName());
+    EXPECT_EQ(result[0].getDefaultPrice(), expectedGames[0].getDefaultPrice());
+    EXPECT_EQ(result[0].getCurrentPrice(), expectedGames[0].getCurrentPrice());
+    EXPECT_EQ(result[0].getDiscount(), expectedGames[0].getDiscount());
+    EXPECT_EQ(result[0].getCurrency(), expectedGames[0].getCurrency());
     
-    EXPECT_EQ(result[1].GetName(), expectedGames[1].GetName());
-    EXPECT_EQ(result[1].GetDefaultPrice(), expectedGames[1].GetDefaultPrice());
-    EXPECT_EQ(result[1].GetCurrentPrice(), expectedGames[1].GetCurrentPrice());
-    EXPECT_EQ(result[1].GetDiscount(), expectedGames[1].GetDiscount());
-    EXPECT_EQ(result[1].GetCurrency(), expectedGames[1].GetCurrency());
+    EXPECT_EQ(result[1].getName(), expectedGames[1].getName());
+    EXPECT_EQ(result[1].getDefaultPrice(), expectedGames[1].getDefaultPrice());
+    EXPECT_EQ(result[1].getCurrentPrice(), expectedGames[1].getCurrentPrice());
+    EXPECT_EQ(result[1].getDiscount(), expectedGames[1].getDiscount());
+    EXPECT_EQ(result[1].getCurrency(), expectedGames[1].getCurrency());
 }
 
 TEST(TestGameRepository, PropagatesDiscardedDataErrorFromFetcher)

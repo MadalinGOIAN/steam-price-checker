@@ -46,11 +46,11 @@ TEST_F(TestSteamApiFetcher, ParsesSingleDiscountedGameCorrectly)
     std::vector<Game> games = sut->fetchDiscountedGames();
 
     ASSERT_EQ(1u, games.size());
-    EXPECT_EQ("Hollow Knight: Silksong", games[0].GetName());
-    EXPECT_DOUBLE_EQ(59.99, games[0].GetDefaultPrice());
-    EXPECT_DOUBLE_EQ(29.99, games[0].GetCurrentPrice());
-    EXPECT_EQ(50, games[0].GetDiscount());
-	EXPECT_EQ("EUR", games[0].GetCurrency());
+    EXPECT_EQ("Hollow Knight: Silksong", games[0].getName());
+    EXPECT_DOUBLE_EQ(59.99, games[0].getDefaultPrice());
+    EXPECT_DOUBLE_EQ(29.99, games[0].getCurrentPrice());
+    EXPECT_EQ(50, games[0].getDiscount());
+	EXPECT_EQ("EUR", games[0].getCurrency());
 }
 
 TEST_F(TestSteamApiFetcher, ParsesMultipleDiscountedGamesCorrectly)

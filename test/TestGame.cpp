@@ -28,25 +28,25 @@ protected:
 
 TEST_F(TestGame, TestGetName)
 {
-	ASSERT_EQ(name, sut->GetName());
+	ASSERT_EQ(name, sut->getName());
 }
 
 TEST_F(TestGame, TestGetDefaultPrice)
 {
-	ASSERT_EQ(defaultPrice, sut->GetDefaultPrice());
+	ASSERT_EQ(defaultPrice, sut->getDefaultPrice());
 }
 
 TEST_F(TestGame, TestGetCurrentPrice)
 {
-	ASSERT_EQ(currentPrice, sut->GetCurrentPrice());
+	ASSERT_EQ(currentPrice, sut->getCurrentPrice());
 }
 
 TEST_F(TestGame, TestGetDiscount)
 {
-	ASSERT_EQ(discount, sut->GetDiscount());
+	ASSERT_EQ(discount, sut->getDiscount());
 }
 
 TEST_F(TestGame, TestGetCurrency)
 {
-	ASSERT_EQ(currency, sut->GetCurrency());
+	ASSERT_EQ(currency, sut->getCurrency());
 }
