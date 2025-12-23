@@ -14,27 +14,27 @@ Game::Game(
 {
 }
 
-std::string Game::GetName() const
+std::string Game::getName() const
 {
 	return name;
 }
 
-double Game::GetDefaultPrice() const
+double Game::getDefaultPrice() const
 {
 	return defaultPrice;
 }
 
-double Game::GetCurrentPrice() const
+double Game::getCurrentPrice() const
 {
 	return currentPrice;
 }
 
-int8_t Game::GetDiscount() const
+int8_t Game::getDiscount() const
 {
 	return discount;
 }
 
-std::string Game::GetCurrency() const
+std::string Game::getCurrency() const
 {
 	return currency;
 }

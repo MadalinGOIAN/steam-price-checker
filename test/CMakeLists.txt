@@ -1,7 +1,8 @@
 add_executable(steam-price-checker-tests
 	TestGame.cpp 
 	TestSteamApiFetcher.cpp
-	TestSteamGameRepository.cpp)
+	TestSteamGameRepository.cpp
+	TestPaginator.cpp)
 
 target_link_libraries(steam-price-checker-tests 
 	PRIVATE 

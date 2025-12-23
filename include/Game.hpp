@@ -8,11 +8,11 @@ class Game
 public:
 	Game(std::string, double, double, int8_t, std::string);
 
-    std::string GetName() const;
-    double GetDefaultPrice() const;
-    double GetCurrentPrice() const;
-    int8_t GetDiscount() const;
-    std::string GetCurrency() const;
+    std::string getName() const;
+    double getDefaultPrice() const;
+    double getCurrentPrice() const;
+    int8_t getDiscount() const;
+    std::string getCurrency() const;
 
 private:
     std::string name;
