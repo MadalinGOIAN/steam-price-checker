@@ -39,6 +39,7 @@ int main()
 
             std::cout << "\nPress any key to see more...\n";
             _getch();
+			system("cls");
         }
     }
     catch (const std::exception& e)
