@@ -34,6 +34,7 @@ int main()
             if (!paginator.hasNext())
             {
                 std::cout << "\nEnd of results.\n";
+                _getch();
                 break;
             }
 
