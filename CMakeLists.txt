@@ -15,19 +15,6 @@ FetchContent_Declare(
 
 FetchContent_MakeAvailable(json)
 
-# Fetch libcurl
-set(BUILD_CURL_EXE OFF CACHE BOOL "" FORCE)
-set(BUILD_SHARED_LIBS OFF CACHE BOOL "" FORCE)
-set(HTTP_ONLY ON CACHE BOOL "" FORCE)
-
-FetchContent_Declare(
-    curl
-    GIT_REPOSITORY https://github.com/curl/curl.git
-    GIT_TAG curl-8_8_0
-)
-
-FetchContent_MakeAvailable(curl)
-
 # Fetch GoogleTest
 FetchContent_Declare(
     googletest
